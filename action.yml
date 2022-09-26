@@ -1,5 +1,14 @@
 name: 'Greetings, from an org'
 description: 'Greet someone (created using sample GitHub action)'
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - reopened
+  workflow_call:
+  
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
